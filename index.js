@@ -1,5 +1,9 @@
 import startsv from './server.js';
+// import rsls from './resolvers.js';
+// import tpds from './typeDefs.js';
 import { gql } from 'apollo-server-core';
+
+
 
 const typeDefs = gql`
 
@@ -9,16 +13,16 @@ type Author {
   surname: String
 }
 
-  type Book {
-    id: ID
-    title: String
-    author: Author
-  }
+type Book {
+  id: ID
+  title: String
+  author: Author
+}
 
-  type Query {
-    books: [Book]
-    authors: [Author]
-  }
+type Query {
+  books: [Book]
+  authors: [Author]
+}
 `;
 
 const authors = [
